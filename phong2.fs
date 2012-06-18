@@ -19,7 +19,7 @@ void main()
 		//NdotH = max( dot( Normal, HalfVec), 0.0);	//Not using half vector as it creates a flare of some sort
 		EdotR = max( dot( EyeVec, ReflVec), 0.0);
 
-		color = ambient + (color * NdotL) +  (color * pow( EdotR, 0.5));
+		color = ambient + (color * NdotL) +  (color * pow( EdotR, 32.0));
 		//Taken from beginning of equation ""
 		//Took out max(ambient, ###)
 	}
