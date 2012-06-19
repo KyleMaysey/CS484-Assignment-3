@@ -8,7 +8,7 @@ void main()
 {
 
 	Normal = normalize(gl_NormalMatrix * gl_Normal);	//transform the normal into eye space coordinates
-	Vert = gl_ModelViewMatrix * gl_Vertex;
+	Vert = (gl_ModelViewMatrix * gl_Vertex).xyz;
 
 	LightVec = normalize(vec3(gl_LightSource[0].position) - (Vert) );	//Find the light vector for surface
 	// "- (gl_ModelViewMatrix * gl_Vertex)" Removed from end of function above

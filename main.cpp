@@ -227,6 +227,16 @@ void display(void){
    glPopMatrix ();
    glFlush ();
    glutSwapBuffers();
+
+   GLenum ErrorCode;
+   const GLubyte* ErrorString;
+
+   while((ErrorCode = glGetError()) != GL_NO_ERROR)
+   {
+	   ErrorString = gluErrorString(ErrorCode);
+	   fprintf(stderr, "OpenGL Error: %s\n", ErrorString);
+   }
+
 }
 
 void reshape (int w, int h)

@@ -34,7 +34,7 @@ How to run:
 
 Example command line:
 
-	glslshader.exe -x phong.vs -f phong.fs
+	glslshader.exe -x shaders/phong.vs -f shaders/phong.fs
 
 Known Bugs:
 
